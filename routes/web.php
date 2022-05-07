@@ -12,12 +12,13 @@ Route::post('/post-login', [BackController::class, 'postLogin'])->name('post-log
 Route::group(['prefix' => '/'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+    Route::get('/privacy-policy', [HomeController::class, 'privacy_policy'])->name('privacy-policy');
     Route::get('/about', [HomeController::class, 'about'])->name('about');
     Route::get('/show/post/{slug}', [HomeController::class, 'showPostDetail'])->name('show-post-detail');
 });
 
 Route::group(['prefix' => '/dashboard', 'middleware' => 'ceklogin'], function () {
-    
+
     // Dashboard Route
     Route::get('/', [BackController::class, 'index'])->name('dashboard');
 

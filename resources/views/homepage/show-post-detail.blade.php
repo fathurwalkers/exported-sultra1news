@@ -9,7 +9,7 @@
         <meta property="og:site_name" content="Sultra1News - Investigasi dalam Berita">
         <meta property="og:title" content="Sultra1News - Investigasi dalam Berita" />
         <meta property="og:type" content="website" />
-        
+
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image" itemprop="image" content="{{ url('/post-images') }}/{{ $artikel->artikel_headergambar }}">
         <meta property="og:image:width" content="300">
@@ -42,11 +42,11 @@
    </head>
 
    <body>
-       <link itemprop="thumbnailUrl" href="{{ url('/post-images') }}/{{ $artikel->artikel_headergambar }}"> 
-        <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject"> 
-          <link itemprop="url" href="{{ url('/post-images') }}/{{ $artikel->artikel_headergambar }}"> 
+       <link itemprop="thumbnailUrl" href="{{ url('/post-images') }}/{{ $artikel->artikel_headergambar }}">
+        <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+          <link itemprop="url" href="{{ url('/post-images') }}/{{ $artikel->artikel_headergambar }}">
         </span>
-       
+
     <!-- Preloader Start -->
     {{-- <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -69,13 +69,13 @@
                        <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
-                                    <ul>     
+                                    <ul>
                                         <li><img src="{{ asset('assets/aznews') }}/assets/img/icon/header_icon1.png" alt="">34ºc, Sunny </li>
                                         <li><img src="{{ asset('assets/aznews') }}/assets/img/icon/header_icon1.png" alt="">Tuesday, 18th June, 2019</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
-                                    <ul class="header-social">    
+                                    <ul class="header-social">
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                        <li> <a href="#"><i class="fab fa-pinterest-p"></i></a></li>
@@ -112,8 +112,8 @@
                                     </div>
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-md-block">
-                                    <nav>                  
-                                        <ul id="navigation">    
+                                    <nav>
+                                        <ul id="navigation">
                                             <li><a href="{{ route('home') }}">Home</a></li>
                                             {{-- <li><a href="categori.html">Category</a></li> --}}
                                             <li><a href="{{ route('about') }}">About</a></li>
@@ -130,14 +130,14 @@
                                         </ul>
                                     </nav>
                                 </div>
-                            </div>             
+                            </div>
                             <div class="col-xl-2 col-lg-2 col-md-4">
                                 <div class="header-right-btn f-right d-none d-lg-block">
                                     <i class="fas fa-search special-tag"></i>
                                     <div class="search-box">
                                         <form action="#">
                                             <input type="text" placeholder="Search">
-                                            
+
                                         </form>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                             </div>
                         </div>
                     </div>
-                   <div class="row">
+                    <div class="row">
                         <div class="col-lg-8">
                             <!-- Trending Tittle -->
                             <div class="about-right mb-90">
@@ -246,11 +246,11 @@
                                         <div class="follow-social">
                                             <a href="#"><img src="{{ asset('assets/aznews') }}/assets/img/news/icon-fb.png" alt=""></a>
                                         </div>
-                                        <div class="follow-count">  
+                                        <div class="follow-count">
                                             <span>8,045</span>
                                             <p>Fans</p>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <div class="follow-us d-flex align-items-center">
                                         <div class="follow-social">
                                             <a href="#"><img src="{{ asset('assets/aznews') }}/assets/img/news/icon-tw.png" alt=""></a>
@@ -285,7 +285,7 @@
                                 <img src="{{ asset('assets/aznews') }}/assets/img/news/news_card.jpg" alt="">
                             </div>
                         </div>
-                   </div>
+                    </div>
             </div>
         </div>
         <!-- About US End -->
@@ -377,7 +377,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="footer-menu f-right">
-                                <ul>                             
+                                <ul>
                                     <li><a href="#">Disclaimer</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
                                     <li><a href="#">Contact</a></li>
@@ -390,12 +390,12 @@
        </div>
        <!-- Footer End-->
    </footer>
-   
+
 	<!-- JS here -->
-	
+
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="{{ asset('assets/aznews') }}/assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		
+
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="{{ asset('assets/aznews') }}/assets/js/vendor/jquery-1.12.4.min.js"></script>
         <script src="{{ asset('assets/aznews') }}/assets/js/popper.min.js"></script>
@@ -421,17 +421,17 @@
         <script src="{{ asset('assets/aznews') }}/assets/js/jquery.scrollUp.min.js"></script>
         <script src="{{ asset('assets/aznews') }}/assets/js/jquery.nice-select.min.js"></script>
 		<script src="{{ asset('assets/aznews') }}/assets/js/jquery.sticky.js"></script>
-        
+
         <!-- contact js -->
         <script src="{{ asset('assets/aznews') }}/assets/js/contact.js"></script>
         <script src="{{ asset('assets/aznews') }}/assets/js/jquery.form.js"></script>
         <script src="{{ asset('assets/aznews') }}/assets/js/jquery.validate.min.js"></script>
         <script src="{{ asset('assets/aznews') }}/assets/js/mail-script.js"></script>
         <script src="{{ asset('assets/aznews') }}/assets/js/jquery.ajaxchimp.min.js"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
+
+		<!-- Jquery Plugins, main Jquery -->
         <script src="{{ asset('assets/aznews') }}/assets/js/plugins.js"></script>
         <script src="{{ asset('assets/aznews') }}/assets/js/main.js"></script>
-        
+
     </body>
 </html>

@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle mb-30">
-                        <h3>Recent Articles</h3>
+                        <h3>Artikel Terbaru</h3>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
             </div>
        </div>
     </div>
-</div>           
+</div>
 {{-- Pagination --}}
 <div class="pagination-area pb-45 text-center">
     <div class="container">
@@ -136,7 +136,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle mb-30">
-                        <h3>Weekly Top News</h3>
+                        <h3>Artikel Pilihan</h3>
                     </div>
                 </div>
             </div>
@@ -163,7 +163,7 @@
             </div>
        </div>
     </div>
-</div>    
+</div>
 @endsection
 
 @section('weekly-two')
@@ -195,12 +195,12 @@
                                     <p>{{ date("D, M - Y", strtotime($weeklytwo->artikel_dibuat)) }}</p>
                                     <h4><a href="/show/post/{{ $weeklytwo->artikel_slug }}">{{ $weeklytwo->artikel_judul }}</a></h4>
                                 </div>
-                            </div> 
+                            </div>
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>       
+</div>
 @endsection
