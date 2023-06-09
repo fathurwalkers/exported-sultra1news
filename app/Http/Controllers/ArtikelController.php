@@ -47,10 +47,14 @@ class ArtikelController extends Controller
         if ($artikel_judul == null) {
             $artikel_judul = null;
         } else {
-            $ExplodeJudul = explode(" ", $artikel_judul);
+            $explode_judul = explode(" ", $artikel_judul);
             $judulPostImplode = [];
-            for ($x = 6; $x >= 0; $x--) {
-                $judulPostImplode = Arr::prepend($judulPostImplode, $ExplodeJudul[$x]);
+            $array_key = count($explode_judul);
+            // for ($x = $array_key; $x >= 0; $x--) {
+            //     $judulPostImplode = Arr::prepend($judulPostImplode, $explode_judul[$x]);
+            // }
+            foreach ($explode_judul as $xxx) {
+                $judulPostImplode = Arr::prepend($judulPostImplode, $xxx);
             }
             $trimJudul = str_replace(array(',', '.', '!'), '', $judulPostImplode);
             $artikel_slug = implode("-", $trimJudul);
@@ -100,16 +104,16 @@ class ArtikelController extends Controller
             $faker = Faker::create('id_ID');
             $dateReq = $faker->date('Y-m-d H:i:s');
             // $newDate = date(strtotime($dateReq));
-    
+
             $iter = [3, 4, 5, 6, 7, 8];
             $randomIter = Arr::random($iter);
-    
+
             $kategori = Kategori::all()->toArray();
             $randomKategori = Arr::random($kategori, $randomIter);
-    
+
             $artikelStatus = ['published', 'draft', 'review'];
             $randomArtikelStatus = Arr::random($artikelStatus);
-    
+
             $postJudul = $faker->words($randomIter, true);
             $ExplodeJudul = explode(" ", $postJudul);
             $judulPostImplode = [];
@@ -160,13 +164,13 @@ class ArtikelController extends Controller
     {
         $artikel_dibuat = $request->artikel_dibuat;
         $newDate = date('Y-m-d H:i:s', strtotime($artikel_dibuat));
-    
+
         $iter = [3, 4, 5, 6, 7, 8];
         $randomIter = Arr::random($iter);
 
         $artikel_status = $request->artikel_status;
 
-    
+
         $postJudul = $request->artikel_judul;
         $ExplodeJudul = explode(" ", $postJudul);
         $judulPostImplode = [];
